@@ -1,0 +1,26 @@
+<settings>
+  <profiles>
+    <profile>
+      <id>bamoe-local</id>
+      <repositories>
+        <repository>
+          <id>bamoe-local-repo</id>
+          <url>file://${basedir}/bamoe-maven-repository</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>bamoe-local-plugin-repo</id>
+          <url>file://${basedir}/bamoe-maven-repository</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>bamoe-local</activeProfile>
+  </activeProfiles>
+</settings>

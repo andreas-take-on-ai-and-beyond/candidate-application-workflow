@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portal - Jobs</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Shared portal configuration (agent IDs, hostURL, orchestrationID) -->
+    <script src="../config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1></h1>
+            </div>
+            <nav>
+                <a href="#positions">We Are Hiring</a>
+                <a href="#company">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>#FutureProof</h2>
+            <p>A Strong Team for a Smarter Future.</p>
+        </div>
+    </section>
+
+    <section id="positions" class="jobs-section">
+        <div class="container">
+            <h2>We Are Hiring</h2>
+            <p class="section-subtitle">Find the perfect position to grow your career.</p>
+            
+            <div class="jobs-grid">
+                <!-- IT Manager Position -->
+                <div class="job-card" data-job-id="it-manager">
+                    <div class="job-header">
+                        <div class="job-badge">IT</div>
+                    </div>
+                    <h3>IT Manager (m/f/d)</h3>
+                    <p class="job-location">Munich | Full-time</p>
+                    <p class="job-description">
+                        Lead our IT team and drive digital transformation. 
+                        Responsibility for infrastructure, security, and strategic IT projects.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('IT Manager')">Apply Now</button>
+                </div>
+
+                <!-- Software Engineer Position -->
+                <div class="job-card" data-job-id="software-engineer">
+                    <div class="job-header">
+                        <div class="job-badge">IT</div>
+                    </div>
+                    <h3>Software Engineer (m/f/d)</h3>
+                    <p class="job-location">Munich | Full-time</p>
+                    <p class="job-description">
+                        Develop innovative software solutions for our production facilities. 
+                        Work with cutting-edge technologies and agile methodologies.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('Software Engineer')">Apply Now</button>
+                </div>
+
+                <!-- Logistics Manager Position -->
+                <div class="job-card" data-job-id="logistics-manager">
+                    <div class="job-header">
+                        <div class="job-badge">Logistics</div>
+                    </div>
+                    <h3>Logistics Manager (m/f/d)</h3>
+                    <p class="job-location">Hamburg | Full-time</p>
+                    <p class="job-description">
+                        Optimize our supply chain and coordinate international goods flows. 
+                        Responsibility for warehouse, transport, and process optimization.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Supply Chain</span>
+                        <span class="tag">SAP</span>
+                        <span class="tag">Processes</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('Logistics Manager')">Apply Now</button>
+                </div>
+
+                <!-- Executive Assistant Position -->
+                <div class="job-card" data-job-id="executive-assistant">
+                    <div class="job-header">
+                        <div class="job-badge">Administration</div>
+                    </div>
+                    <h3>Executive Assistant (m/f/d)</h3>
+                    <p class="job-location">Munich | Full-time</p>
+                    <p class="job-description">
+                        Support our executive management with strategic and operational tasks. 
+                        Organization, communication, and project coordination at the highest level.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Organization</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">MS Office</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('Executive Assistant')">Apply Now</button>
+                </div>
+
+                <!-- Production Planner Position -->
+                <div class="job-card" data-job-id="production-planner">
+                    <div class="job-header">
+                        <div class="job-badge">Production</div>
+                    </div>
+                    <h3>Production Planner (m/f/d)</h3>
+                    <p class="job-location">Stuttgart | Full-time</p>
+                    <p class="job-description">
+                        Plan and control our production processes for maximum efficiency. 
+                        Capacity planning, material management, and continuous improvement.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Planning</span>
+                        <span class="tag">ERP</span>
+                        <span class="tag">Lean</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('Production Planner')">Apply Now</button>
+                </div>
+
+                <!-- DevOps Engineer Position -->
+                <div class="job-card" data-job-id="devops-engineer">
+                    <div class="job-header">
+                        <div class="job-badge">IT</div>
+                    </div>
+                    <h3>DevOps Engineer (m/f/d)</h3>
+                    <p class="job-location">Munich | Full-time</p>
+                    <p class="job-description">
+                        Automate and optimize our development and deployment processes. 
+                        CI/CD, container orchestration, and cloud infrastructure.
+                    </p>
+                    <div class="job-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                    <button class="apply-btn" onclick="openChat('DevOps Engineer')">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Work With Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Exciting Projects</h3>
+                    <p>Work on innovative projects with cutting-edge technologies</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Career Development</h3>
+                    <p>Individual training and clear career paths</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Flexible Work</h3>
+                    <p>Home office options and flexible working hours</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Team Culture</h3>
+                    <p>Open communication and collegial atmosphere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Chat -->
+    <div id="root"></div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- watsonx Orchestrate Chat Integration -->
+    <script>
+        var cfg = window.DEMO_CONFIG;
+        window.wxOConfiguration = {
+            orchestrationID: cfg.orchestrationID,
+            hostURL:         cfg.hostURL,
+            rootElementID:   "root",
+            showLauncher:    true,
+            chatOptions: {
+                agentId: cfg.agentIds.applicant
+            },
+            header: {
+                showMaximize:     true,
+                showResetButton:  true,
+                showAiDisclaimer: true
+            },
+            layout: {
+                form:                 'float',
+                width:                '600px',
+                height:               '800px',
+                showOrchestrateHeader: true,
+                showMaxWidth:         true
+            },
+            style: {
+                headerColor:                 '#1e40af',
+                userMessageBackgroundColor:  '#e5e7eb',
+                primaryColor:                '#1e40af',
+                showBackgroundGradient:      true
+            }
+        };
+
+        // clickLauncherButton() — finds the wxO floating launcher button inside
+        // #root and clicks it programmatically.  The loader does not expose a
+        // public .show() API, so we locate the button via MutationObserver and
+        // dispatch a real click event on it.
+        function clickLauncherButton(retries) {
+            retries = retries || 0;
+            // The launcher is the first button (or the outermost button) inside #root
+            var root = document.getElementById('root');
+            if (!root) return;
+            var btn = root.querySelector('button');
+            if (btn) {
+                btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+            } else if (retries < 20) {
+                // React hasn't rendered yet — retry every 150 ms (up to 3 s total)
+                setTimeout(function () { clickLauncherButton(retries + 1); }, 150);
+            }
+        }
+
+        // initWxOChat(position) — loads the wxO loader once, then opens the chat.
+        // Called from openChat() in script.js when user clicks "Apply Now".
+        window.initWxOChat = function (position) {
+            if (!window.wxOChatLoaded) {
+                var s = document.createElement('script');
+                s.src = cfg.hostURL + '/wxoLoader.js?embed=true';
+                s.addEventListener('load', function () {
+                    wxoLoader.init();
+                    window.wxOChatLoaded = true;
+                    // Wait for React to render the launcher button, then click it
+                    if (position) {
+                        setTimeout(function () { clickLauncherButton(); }, 1500);
+                    }
+                });
+                document.head.appendChild(s);
+            } else {
+                // Loader already mounted — just click the launcher button directly
+                clickLauncherButton();
+            }
+        };
+    </script>
+</body>
+</html>

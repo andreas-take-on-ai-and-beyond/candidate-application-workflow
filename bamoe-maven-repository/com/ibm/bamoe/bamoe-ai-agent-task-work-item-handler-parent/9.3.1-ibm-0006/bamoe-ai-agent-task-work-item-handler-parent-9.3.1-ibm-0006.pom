@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  IBM Confidential
+  PID 5900-AR4
+  Copyright IBM Corp. 2025  
+-->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ibm.bamoe</groupId>
+    <artifactId>bamoe-build-parent</artifactId>
+    <version>9.3.1-ibm-0006</version>
+    <relativePath>./node_modules/@bamoe/maven-build-parent/pom.xml</relativePath>
+  </parent>
+  <artifactId>bamoe-ai-agent-task-work-item-handler-parent</artifactId>
+  <version>9.3.1-ibm-0006</version>
+  <packaging>pom</packaging>
+  <name>Business Automation Manager Open Editions - Workflow AI Agent Task Handler</name>
+  <description>IBM BAMOE Workflow AI Agent Task WorkItemHandler parent pom file.</description>
+  <licenses>
+    <license>
+      <name>Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <modules>
+    <module>bamoe-ai-agent-task-work-item-handler-quarkus-runtime</module>
+    <module>bamoe-ai-agent-task-work-item-handler-quarkus-deployment</module>
+    <module>bamoe-ai-agent-task-work-item-handler-common</module>
+    <module>bamoe-ai-agent-task-work-item-handler-spring-boot</module>
+  </modules>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-bom</artifactId>
+        <version>${version.quarkus}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${version.springframework.boot}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

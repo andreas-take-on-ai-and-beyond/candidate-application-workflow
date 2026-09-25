@@ -1,0 +1,5 @@
+# Replace <KIE_DB_PASSWORD> with the value of KIE_DB_PASSWORD from your .env file.
+# This file is generated automatically by the pgadmin container entrypoint from
+# the KIE_DB_PASSWORD env var — you do not normally need to edit it manually.
+postgres:5432:kie:kie-user:<KIE_DB_PASSWORD>
+postgres:5432:postgres:kie-user:<KIE_DB_PASSWORD>

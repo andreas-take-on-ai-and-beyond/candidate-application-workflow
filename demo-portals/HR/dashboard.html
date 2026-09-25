@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard - Recruitment Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Shared portal configuration (agent IDs, hostURL, orchestrationID) -->
+    <script src="../config.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HR Dashboard</h1>
+                <span class="role-badge">Recruiter</span>
+            </div>
+            <nav>
+                <a href="#applications" class="active">Applications</a>
+                <a href="#positions">Open positions</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#settings">Settings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Stats Overview -->
+            <section class="stats-section">
+                <h2>Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">New Applications</div>
+                        <div class="stat-change positive">+8 this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Open Positions</div>
+                        <div class="stat-change neutral">2 closing soon</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">In Review</div>
+                        <div class="stat-change">Pending action</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Interviews Scheduled</div>
+                        <div class="stat-change positive">This week</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Applications -->
+            <section class="applications-section">
+                <div class="section-header">
+                    <h2>Recent Applications</h2>
+                    <div class="filters">
+                        <select class="filter-select">
+                            <option>All Positions</option>
+                            <option>IT Manager</option>
+                            <option>Software Engineer</option>
+                            <option>DevOps Engineer</option>
+                            <option>Logistics Manager</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>New</option>
+                            <option>In Review</option>
+                            <option>Interview</option>
+                            <option>Offer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="applications-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Applicant</th>
+                                <th>Position</th>
+                                <th>Applied</th>
+                                <th>Status</th>
+                                <th>Match Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="applicant-info">
+                                        <div class="applicant-avatar">AS</div>
+                                        <div>
+                                            <div class="applicant-name">Anna Sterling</div>
+                                            <div class="applicant-email">as@email.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="position-badge it">IT Manager</span></td>
+                                <td>< 1 hour ago</td>
+                                <td><span class="status-badge new">New</span></td>
+                                <td>
+                                    <div class="match-score high">92%</div>
+                                </td>
+                                <td>
+                                    <button class="action-btn primary">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="applicant-info">
+                                        <div class="applicant-avatar">CT</div>
+                                        <div>
+                                            <div class="applicant-name">Charles McTurland</div>
+                                            <div class="applicant-email">cmcturland@email.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="position-badge it">Software Engineer</span></td>
+                                <td>< 1 hour ago</td>
+                                <td><span class="status-badge new">New</span></td>
+                                <td>
+                                    <div class="match-score high">88%</div>
+                                </td>
+                                <td>
+                                    <button class="action-btn primary">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="applicant-info">
+                                        <div class="applicant-avatar">TM</div>
+                                        <div>
+                                            <div class="applicant-name">Thomas Müller</div>
+                                            <div class="applicant-email">t.mueller@email.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="position-badge logistics">Logistics Manager</span></td>
+                                <td>1 day ago</td>
+                                <td><span class="status-badge new">New</span></td>
+                                <td>
+                                    <div class="match-score medium">75%</div>
+                                </td>
+                                <td>
+                                    <button class="action-btn primary">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="applicant-info">
+                                        <div class="applicant-avatar">LW</div>
+                                        <div>
+                                            <div class="applicant-name">Lisa Weber</div>
+                                            <div class="applicant-email">l.weber@email.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="position-badge logistics">Logistics Manager</span></td>
+                                <td>1 day ago</td>
+                                <td><span class="status-badge interview">Interview</span></td>
+                                <td>
+                                    <div class="match-score high">85%</div>
+                                </td>
+                                <td>
+                                    <button class="action-btn primary">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="applicant-info">
+                                        <div class="applicant-avatar">JB</div>
+                                        <div>
+                                            <div class="applicant-name">Jan Becker</div>
+                                            <div class="applicant-email">j.becker@email.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="position-badge logistics">Logistics Manager</span></td>
+                                <td>2 days ago</td>
+                                <td><span class="status-badge interview">Interview</span></td>
+                                <td>
+                                    <div class="match-score medium">78%</div>
+                                </td>
+                                <td>
+                                    <button class="action-btn primary">Open</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Open Positions -->
+            <section class="positions-section">
+                <div class="section-header">
+                    <h2>Top-3 Open positions</h2>
+                    <button class="action-btn primary">+ New Position</button>
+                </div>
+
+                <div class="positions-grid">
+                    <div class="position-card">
+                        <div class="position-header">
+                            <h3>IT Manager (m/f/d)</h3>
+                            <span class="position-badge it">IT</span>
+                        </div>
+                        <div class="position-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">8</span>
+                                <span class="stat-label">Applications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">In Review</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">1</span>
+                                <span class="stat-label">Interview</span>
+                            </div>
+                        </div>
+                        <div class="position-footer">
+                            <span class="position-date">Posted 14 days ago</span>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="position-card">
+                        <div class="position-header">
+                            <h3>Software Engineer (m/f/d)</h3>
+                            <span class="position-badge it">IT</span>
+                        </div>
+                        <div class="position-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Applications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">In Review</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">2</span>
+                                <span class="stat-label">Interview</span>
+                            </div>
+                        </div>
+                        <div class="position-footer">
+                            <span class="position-date">Posted 7 days ago</span>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="position-card">
+                        <div class="position-header">
+                            <h3>Logistics Manager (m/f/d)</h3>
+                            <span class="position-badge it">IT</span>
+                        </div>
+                        <div class="position-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">4</span>
+                                <span class="stat-label">Applications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">2</span>
+                                <span class="stat-label">In Review</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">1</span>
+                                <span class="stat-label">Interview</span>
+                            </div>
+                        </div>
+                        <div class="position-footer">
+                            <span class="position-date">Posted 21 days ago</span>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Placeholder -->
+            <div id="root"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <!-- watsonx Orchestrate Chat Integration -->
+    <script>
+        var cfg = window.DEMO_CONFIG;
+        window.wxOConfiguration = {
+            orchestrationID: cfg.orchestrationID,
+            hostURL:         cfg.hostURL,
+            rootElementID:   "root",
+            showLauncher:    true,
+            chatOptions: {
+                agentId: cfg.agentIds.hr
+            },
+            header: {
+                showMaximize:     true,
+                showResetButton:  true,
+                showAiDisclaimer: true
+            },
+            layout: {
+                form:                  'float',
+                width:                 '600px',
+                height:                '800px',
+                showOrchestrateHeader: true,
+                showMaxWidth:          true
+            },
+            style: {
+                headerColor:           '#2d7a4f',
+                primaryColor:          '#2d7a4f',
+                showBackgroundGradient: true
+            }
+        };
+        setTimeout(function () {
+            var s = document.createElement('script');
+            s.src = cfg.hostURL + '/wxoLoader.js?embed=true';
+            s.addEventListener('load', function () { wxoLoader.init(); });
+            document.head.appendChild(s);
+        }, 0);
+    </script>
+</body>
+</html>

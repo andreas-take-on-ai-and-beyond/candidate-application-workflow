@@ -1,0 +1,54 @@
+# ─── Environment & secrets ────────────────────────────────────────────────────
+.env
+*.env
+!.env.example
+
+# ─── BAMOE build artefacts ────────────────────────────────────────────────────
+**/target/
+**/target-quarkus/
+
+# ─── Python virtualenv & cache ────────────────────────────────────────────────
+wxo-agents/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.egg-info/
+
+# ─── Docker/Podman runtime state ──────────────────────────────────────────────
+docker-compose/persistence/
+docker-compose/svg/
+svg/
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+
+# ─── IDE / editors ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# ─── Java ────────────────────────────────────────────────────────────────────
+*.class
+# NOTE: *.jar is intentionally NOT ignored here.
+# bamoe-maven-repository/ contains the offline BAMOE Maven cache (IBM proprietary
+# artifacts not available on Maven Central) and is committed deliberately to make
+# the build self-contained (Step 2 of the README works without internet access).
+
+# ─── Node (demo portals use no build tool, guard against accidental installs) ─
+node_modules/
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+
+# ─── Bob (Agentic IDE) & Gemini workspace state ──────────────────────────────
+.bob/
+.gemini/
+
+# ─── pgAdmin (generated at container startup from KIE_DB_PASSWORD env var) ──
+docker-compose/pgadmin/pgpass
+
+# Catch any pgpass file regardless of subdirectory
+**/pgpass
