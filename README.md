@@ -1,4 +1,4 @@
-# BAMOE Hiring Demo
+# Candidate Application Workflow
 
 **IBM Business Automation Manager Open Edition (BAMOE) + watsonx Orchestrate**
 
