@@ -37,7 +37,6 @@ A reference demo showing how deterministic BPMN workflows and AI agents compleme
 7. [Shutdown & Teardown Guide](#shutdown--teardown-guide)
 8. [Configuration Reference](#configuration-reference)
 9. [Troubleshooting](#troubleshooting)
-10. [License](#license)
 
 ---
 
@@ -1027,15 +1026,3 @@ Work through this checklist in order:
 
 6. **Re-run the agent import after an ADK restart** — agent UUIDs are preserved across restarts, but if you wiped the Developer Edition data volume and re-started, all UUIDs change and you must repeat Steps 8a–8c.
 
----
-
-## License
-
-This project is licensed under the **Apache License, Version 2.0**.
-See [`LICENSE`](LICENSE) or http://www.apache.org/licenses/LICENSE-2.0 for the full text.
-
-Copyright IBM Corp. 2025.
-
----
-
-*Built with IBM watsonx Orchestrate and IBM Business Automation Manager Open Edition.*
