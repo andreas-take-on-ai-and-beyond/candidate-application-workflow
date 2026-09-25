@@ -4,7 +4,9 @@
 
 A reference demo showing how deterministic BPMN workflows and AI agents complement each other in an end-to-end hiring process. Two parallel flows run side-by-side — a classic structured process and an AI-augmented one with automatic CV pre-screening — each driven by conversational agents embedded in role-specific web portals.
 
-> 📖 **Blog post:** [Fixed path or flexible minds?](https://schneiderandreas.net/2026/05/11/fixed-path-or-flexible-minds/) — full scenario walkthrough and architecture narrative.
+> 📖 **Related reading:**
+> - [Fixed path or flexible minds?](https://schneiderandreas.net/2026/05/11/fixed-path-or-flexible-minds/) — full walkthrough of the three-stage HR scenario (application submission → HR review → business-unit decision) that this demo implements.
+> - [From generative AI to AI agents — opportunities, challenges & broader impact](https://schneiderandreas.net/2025/12/10/from-generative-ai-to-ai-agents-opportunities-challenges-broader-impact/) — background on agentic AI, including reliability, autonomy, and the trust considerations that shape demos like this one.
 
 ---
 
