@@ -33,7 +33,7 @@ services:
       retries: 50
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
 
   pgadmin:
     container_name: bamoe-hiring-demo-pgadmin
@@ -54,11 +54,11 @@ services:
       "
     environment:
       PGADMIN_DEFAULT_EMAIL: user@kie.org
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:?PGADMIN_DEFAULT_PASSWORD must be set in .env}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-pass}
       PGADMIN_CONFIG_SERVER_MODE: "False"
       PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
       GUNICORN_ACCESS_LOGFILE: "/dev/null"
-      KIE_DB_PASSWORD: ${KIE_DB_PASSWORD:?KIE_DB_PASSWORD must be set in .env}
+      KIE_DB_PASSWORD: ${KIE_DB_PASSWORD:-kie-pass}
 
   process-ai-prescreen-hiring:
     container_name: process-ai-prescreen-hiring
@@ -80,15 +80,15 @@ services:
       QUARKUS_DATASOURCE_JDBC_URL: "jdbc:postgresql://postgres:5432/kie_ai"
       QUARKUS_DATASOURCE_REACTIVE_URL: "postgresql://postgres:5432/kie_ai"
       QUARKUS_DATASOURCE_USERNAME: kie-user
-      QUARKUS_DATASOURCE_PASSWORD: ${KIE_DB_PASSWORD:?KIE_DB_PASSWORD must be set in .env}
+      QUARKUS_DATASOURCE_PASSWORD: ${KIE_DB_PASSWORD:-kie-pass}
       QUARKUS_DATASOURCE_DB_KIND: postgresql
       KOGITO_JOBS_SERVICE_URL: http://localhost:8080
       KOGITO_SERVICE_URL: http://localhost:8080
       KOGITO_DATAINDEX_HTTP_URL: http://localhost:8080
-      AI_PRESCREEN_URL: ${AI_PRESCREEN_URL:?AI_PRESCREEN_URL must be set in .env}
-      ADK_AUTH_USERNAME: ${ADK_AUTH_USERNAME:?ADK_AUTH_USERNAME must be set in .env}
-      ADK_AUTH_PASSWORD: ${ADK_AUTH_PASSWORD:?ADK_AUTH_PASSWORD must be set in .env}
-      ADK_TENANT_NAME: ${ADK_TENANT_NAME:?ADK_TENANT_NAME must be set in .env}
+      AI_PRESCREEN_URL: ${AI_PRESCREEN_URL:-http://host.docker.internal:4321}
+      ADK_AUTH_USERNAME: ${ADK_AUTH_USERNAME:-wxo.archer@ibm.com}
+      ADK_AUTH_PASSWORD: ${ADK_AUTH_PASSWORD:-watsonx}
+      ADK_TENANT_NAME: ${ADK_TENANT_NAME:-wxo-dev}
       # ── Demo-only role gate ─────────────────────────────────────────────────
       # OIDC is disabled (quarkus.oidc.enabled=false in application.properties).
       # The "password" values below are intentional demo placeholders for a
@@ -115,7 +115,7 @@ services:
       QUARKUS_DATASOURCE_JDBC_URL: "jdbc:postgresql://postgres:5432/kie"
       QUARKUS_DATASOURCE_REACTIVE_URL: "postgresql://postgres:5432/kie"
       QUARKUS_DATASOURCE_USERNAME: kie-user
-      QUARKUS_DATASOURCE_PASSWORD: ${KIE_DB_PASSWORD:?KIE_DB_PASSWORD must be set in .env}
+      QUARKUS_DATASOURCE_PASSWORD: ${KIE_DB_PASSWORD:-kie-pass}
       QUARKUS_DATASOURCE_DB_KIND: postgresql
       KOGITO_JOBS_SERVICE_URL: http://localhost:8080
       KOGITO_SERVICE_URL: http://localhost:8080

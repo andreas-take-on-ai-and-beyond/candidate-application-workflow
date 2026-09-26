@@ -846,6 +846,8 @@ docker-compose down
 docker-compose down -v
 ```
 
+> **Note:** `docker-compose down` works even without a `.env` file — all variables now fall back to the same demo defaults that ship in `.env.example`. A `.env` file is only required when running `docker-compose up`.
+
 > Use `docker-compose down -v` when you want a fresh start: the next `docker-compose up -d` will re-run `init.sql` and create empty `kie` / `kie_ai` databases.
 
 ### 3. Stop the watsonx Orchestrate ADK Server
